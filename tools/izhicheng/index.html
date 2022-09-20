@@ -36,7 +36,22 @@
                                     <div class="qrCode"></div>
                                 </div>
                                 <div class="msg">绿码：自由通行。发现弄速作假，将严肃处理，井移送相关都门。</div>
-                                <div class="time"></div>
+                                <div class="time">
+                                    <div class="current-time">
+                                        <div class="hour"> {{currentTime.hour}} </div>
+                                        <span>:</span>
+                                        <div class="minute"> {{currentTime.minute}} </div>
+                                        <span >:</span>
+                                        <div class="second"> {{currentTime.second}} </div>
+                                        <span >:</span>
+                                        <div class="millsecond"> {{currentTime.millsecond}} </div>
+                                    </div>
+                                    <div class="current-date">
+                                        <div class="line"></div>
+                                        <div class="updateDate">{{currentDate}}</div>
+                                        <div class="line"></div>
+                                    </div>
+                                </div>
                                 <p class="cph"></p>
                             </div>
                         </div>
