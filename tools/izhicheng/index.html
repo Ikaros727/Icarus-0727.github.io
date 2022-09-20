@@ -11,76 +11,89 @@
 
 <body>
     <div id="app">
-        <div class="content-wrapper">
-            <div class="container">
-                <div class="container-header">
-                    <div class="logo">
-                        <img src="/tools/izhicheng/imgs/logo.png" alt>
-                    </div>
-                    <div class="txz">
-                        <div class="left">
-                            <img src="/tools/izhicheng/imgs/left.png" alt>
-                        </div>
-                        <div class="center">
-                            <img src="/tools/izhicheng/imgs/center.png" alt>
-                        </div>
-                        <div class="right">
-                            <img src="/tools/izhicheng/imgs/right.png" alt>
-                        </div>
-                    </div>
-                    <div class="container-center">
-                        <div class="card" style="position: relative;">
-                            <img src="/tools/izhicheng/imgs/doctor.png" alt>
-                            <div class="info">
-                                <div class="headphoto"
-                                    style="background-image: url('/tools/izhicheng/imgs/avatar_default.jpeg');"></div>
-                                <div class="person-info"></div>
-                                <div class="person-info">
-                                    <div data-v-1586580d=""><span data-v-1586580d="" class="xm fix-width"><span
-                                                data-v-1586580d="">姓</span><span data-v-1586580d="">名</span></span>：
-                                        <span data-v-1586580d="" style="font-weight: bold;">{{stuInfo.name}}</span>
-                                    </div>
-                                    <div data-v-1586580d=""><span data-v-1586580d="" class="xhg fix-width">学号/工号</span>：
-                                        <span data-v-1586580d="" style="font-weight: bold;">{{stuInfo.sno}}</span>
-                                    </div>
-                                    <div data-v-1586580d=""><span data-v-1586580d="" class="yx fix-width">院系/部门</span>：
-                                        <span data-v-1586580d="" style="font-weight: bold;">{{stuInfo.major}}</span>
-                                    </div>
-                                    <div data-v-1586580d=""><span data-v-1586580d="" class="bj fix-width">班级/单位</span>：
-                                        <span data-v-1586580d="" style="font-weight: bold;">{{stuInfo.class}}</span>
+        <div class="outBox">
+            <div class="wrapper">
+                <div class="content-wrapper">
+                    <div class="container">
+                        <div class="container-header">
+                            <div class="logo">
+                                <img src="/tools/izhicheng/imgs/logo.png" alt>
+                            </div>
+                            <div class="txz">
+                                <div class="left">
+                                    <img src="/tools/izhicheng/imgs/left.png" alt>
+                                </div>
+                                <div class="center">
+                                    <img src="/tools/izhicheng/imgs/center.png" alt>
+                                </div>
+                                <div class="right">
+                                    <img src="/tools/izhicheng/imgs/right.png" alt>
+                                </div>
+                            </div>
+                            <div class="container-center">
+                                <div class="card" style="position: relative;">
+                                    <img src="/tools/izhicheng/imgs/doctor.png" alt>
+                                    <div class="info">
+                                        <div class="headphoto"
+                                            style="background-image: url('/tools/izhicheng/imgs/avatar_default.jpeg');">
+                                        </div>
+                                        <div class="person-info">
+                                            <div data-v-1586580d=""><span data-v-1586580d="" class="xm fix-width"><span
+                                                        data-v-1586580d="">姓</span><span
+                                                        data-v-1586580d="">名</span></span>：
+                                                <span data-v-1586580d=""
+                                                    style="font-weight: bold;">{{stuInfo.name}}</span>
+                                            </div>
+                                            <div data-v-1586580d=""><span data-v-1586580d=""
+                                                    class="xhg fix-width">学号/工号</span>：
+                                                <span data-v-1586580d=""
+                                                    style="font-weight: bold;">{{stuInfo.sno}}</span>
+                                            </div>
+                                            <div data-v-1586580d=""><span data-v-1586580d=""
+                                                    class="yx fix-width">院系/部门</span>：
+                                                <span data-v-1586580d=""
+                                                    style="font-weight: bold;">{{stuInfo.major}}</span>
+                                            </div>
+                                            <div data-v-1586580d=""><span data-v-1586580d=""
+                                                    class="bj fix-width">班级/单位</span>：
+                                                <span data-v-1586580d=""
+                                                    style="font-weight: bold;">{{stuInfo.class}}</span>
+                                            </div>
+                                        </div>
+                                        <div class="qrimg">
+                                            <div class="qrCode">
+                                                <canvas width="140" height="140" style="display: none;"></canvas>
+                                                <img style="display: block;"
+                                                    src="/tools/izhicheng/imgs/qrcode_default.png" alt>
+                                            </div>
+                                        </div>
+                                        <div class="msg">绿码：自由通行。发现弄虚作假，将严肃处理，井移送相关都门。</div>
+                                        <div class="time">
+                                            <div class="current-time">
+                                                <div class="hour"> {{currentTime.hour}} </div>
+                                                <span>:</span>
+                                                <div class="minute"> {{currentTime.minute}} </div>
+                                                <span>:</span>
+                                                <div class="second"> {{currentTime.second}} </div>
+                                                <span>:</span>
+                                                <div class="millsecond"> {{currentTime.millsecond}} </div>
+                                            </div>
+                                            <div class="current-date">
+                                                <div class="line"></div>
+                                                <div class="updateDate">{{currentDate}}</div>
+                                                <div class="line"></div>
+                                            </div>
+                                        </div>
+                                        <p class="cph"></p>
                                     </div>
                                 </div>
-                                <div class="qrimg">
-                                    <div class="qrCode">
-                                        <canvas width="140" height="140" style="display: none;"></canvas>
-                                        <img style="display: block;" src="/tools/izhicheng/imgs/qrcode_default.png" alt>
-                                    </div>
-                                </div>
-                                <div class="msg">绿码：自由通行。发现弄虚作假，将严肃处理，井移送相关都门。</div>
-                                <div class="time">
-                                    <div class="current-time">
-                                        <div class="hour"> {{currentTime.hour}} </div>
-                                        <span>:</span>
-                                        <div class="minute"> {{currentTime.minute}} </div>
-                                        <span>:</span>
-                                        <div class="second"> {{currentTime.second}} </div>
-                                        <span>:</span>
-                                        <div class="millsecond"> {{currentTime.millsecond}} </div>
-                                    </div>
-                                    <div class="current-date">
-                                        <div class="line"></div>
-                                        <div class="updateDate">{{currentDate}}</div>
-                                        <div class="line"></div>
-                                    </div>
-                                </div>
-                                <p class="cph"></p>
                             </div>
                         </div>
+                        <div class="foot">
+                            <img src="/tools/izhicheng/imgs/foot.png" alt>
+                            <div class="copyright"> 版权所有©福州大学至诚学院ICP备案号：闽ICP备14016203 </div>
+                        </div>
                     </div>
-                </div>
-                <div class="foot">
-                    <img src="/tools/izhicheng/imgs/foot.png" alt>
-                    <div class="copyright"> 版权所有©福州大学至诚学院ICP备案号：闽ICP备14016203 </div>
                 </div>
             </div>
         </div>

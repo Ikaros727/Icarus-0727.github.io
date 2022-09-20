@@ -4,6 +4,19 @@
     padding: 0;
 }
 
+#app {
+    height: 100%;
+}
+
+.outBox {
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper {
+    height: 100%;
+}
+
 .content-wrapper {
     position: relative;
     height: 100%;
@@ -136,14 +149,14 @@
     color: #999;
 }
 
-.container .fix-width {
-    display: inline-block;
-    width: 54px;
-}
-
 .container .fix-width.xm {
     display: flex;
     justify-content: space-between;
+}
+
+.container .fix-width {
+    display: inline-block;
+    width: 54px;
 }
 
 .container .container-center .info .qrimg {
