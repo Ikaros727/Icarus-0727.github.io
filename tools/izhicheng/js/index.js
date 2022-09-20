@@ -14,6 +14,7 @@ createApp({
     },
     created() {
         this.setCurrentDate()
+        this.setCurrentTime()
     },
     methods: {
         setCurrentDate() {
