@@ -1,5 +1,7 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 .content-wrapper {
@@ -92,4 +94,40 @@
     text-align: center;
     position: relative;
     height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+.container .foot {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container .foot img[data-v-1586580d] {
+    width: 65%;
+    padding-bottom: 5px;
+    position: fixed;
+    bottom: 30px;
+    left: 17.5%;
+}
+
+.container .foot .copyright {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: #fff;
+    font-size: 12px;
+    background: #1574df;
+    text-align: center;
+    height: 22px;
+    line-height: 22px;
 }
