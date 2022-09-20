@@ -28,7 +28,7 @@ createApp({
             this.currentDate = year + "年" + month + "月" + day + "日"
         },
         setCurrentTime() {
-            requestAnimationFrame(() => {
+            setInterval(() => {
                 var date = new Date()
                 this.currentTime.hour = date.getHours()
                 this.currentTime.minute = date.getMinutes()
@@ -49,7 +49,7 @@ createApp({
                 if (this.currentTime.millsecond < 100) {
                     this.currentTime.millsecond = "0" + this.currentTime.millsecond
                 }
-            });
+            }, 17);
         }
     },
 }).mount('#app')
