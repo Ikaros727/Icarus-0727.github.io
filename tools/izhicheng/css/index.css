@@ -107,7 +107,31 @@
     background-repeat: no-repeat;
 }
 
+.container .container-center .info .person-info {
+    font-size: 12px;
+    color: #333;
+    font-family: PingFangSC-Regular,PingFang SC;
+    line-height: 22px;
+    margin-right: 20px;
+    padding: 20px 0;
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 45vw;
+    justify-content: space-evenly;
+    flex: 1;
+}
 
+.container .container-center .info .qrimg {
+    z-index: 2;
+    width: 158px;
+    height: 158px;
+    padding: 2px;
+    border: 7px solid #1574df;
+    border-radius: 14px;
+    margin: 0 auto;
+}
 
 .container .container-center .info .msg {
     color: #389b38;
@@ -118,8 +142,21 @@
     margin: 0 auto;
 }
 
+.container .time {
+    color: #3d74c5;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 30px;
+    padding-top: 10px;
+}
 
-
+.container .container-center .info .time {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+}
 
 .container .container-center .info .cph {
     display: flex;
