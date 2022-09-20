@@ -92,7 +92,7 @@
     max-height: 480px;
 }
 
-.container .container-center .card .doctor img {
+#img-doctor {
     width: 60px;
     height: 72px;
     top: -61px;
