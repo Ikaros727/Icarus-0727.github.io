@@ -96,15 +96,41 @@
     height: 100%;
 }
 
+.container .container-center .info .headphoto {
+    width: 140px;
+    height: 196px;
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    z-index: 99;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+
+
+.container .container-center .info .msg {
+    color: #389b38;
+    font-size: 12px;
+    padding-top: 10px;
+    line-height: 12px;
+    width: 100%;
+    margin: 0 auto;
+}
 
 
 
 
-
-
-
-
-
+.container .container-center .info .cph {
+    display: flex;
+    color: red;
+    margin: 0 auto;
+    font-size: 32px;
+    position: absolute;
+    bottom: -40px;
+    width: 100%;
+    justify-content: center;
+}
 
 .container .foot {
     display: flex;
