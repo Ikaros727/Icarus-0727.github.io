@@ -3,6 +3,12 @@ import { createApp } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
 createApp({
     data() {
         return {
+            stuInfo: {
+                name: "刻晴",
+                sno: "212206301",
+                major: "计算机工程系",
+                class: "2022软件工程1",
+            },
             currentTime: {
                 hour: 0,
                 minute: 0,
@@ -17,6 +23,12 @@ createApp({
         this.setCurrentTime()
     },
     methods: {
+        setAvatar() {
+            
+        },
+        setStuInfo() {
+
+        },
         setCurrentDate() {
             var date = new Date()
             var year = date.getFullYear()
