@@ -123,6 +123,29 @@
     flex: 1;
 }
 
+.container .container-center .info .person-info div {
+    display: flex;
+    width: 155px;
+    white-space: nowrap;
+}
+
+.container .container-center .info .person-info .bj,
+.container .container-center .info .person-info .xhg,
+.container .container-center .info .person-info .xm,
+.container .container-center .info .person-info .yx {
+    color: #999;
+}
+
+.container .fix-width {
+    display: inline-block;
+    width: 54px;
+}
+
+.container .fix-width.xm {
+    display: flex;
+    justify-content: space-between;
+}
+
 .container .container-center .info .qrimg {
     z-index: 2;
     width: 158px;
