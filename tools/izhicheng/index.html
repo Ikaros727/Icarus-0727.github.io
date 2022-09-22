@@ -9,7 +9,39 @@
 <body>
     <div id="app">
         <div class="container">
-            照片: <input ref="avatar" type="file" @change="submitAvatar" />
+            <div class="container-content">
+                <div v-if="hasLast">
+                    <button @click="showPass">使用上次</button>&emsp;
+                    <button @click="hasLast = false">创建新身份</button>
+                </div>
+                <div v-else class="set-info">
+                    <div class="name">
+                        <span><b>姓名：</b></span>
+                        <input type="text" v-model="stuInfo.name" />
+                    </div>
+                    <div class="sno">
+                        <span><b>学号：</b></span>
+                        <input type="text" v-model="stuInfo.sno" />
+                    </div>
+                    <div class="departments">
+                        <span><b>院系：</b></span>
+                        <input type="text" v-model="stuInfo.departments" />
+                    </div>
+                    <div class="major">
+                        <span><b>班级：</b></span>
+                        <input type="text" v-model="stuInfo.major" />
+                    </div>
+                    <br/>
+                    <div>
+                        <span><b>照片：</b></span>
+                        <input ref="avatar" type="file" />
+                    </div>
+                    <br/>
+                    <div>
+                        <button @click="newPass">提交</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>

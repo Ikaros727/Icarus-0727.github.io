@@ -7,8 +7,8 @@ createApp({
             stuInfo: {
                 name: "刻晴",
                 sno: "212206301",
-                major: "计算机工程系",
-                class: "2022软件工程1",
+                departments: "计算机工程系",
+                major: "2022软件工程1",
             },
             currentTime: {
                 hour: 0,
@@ -20,16 +20,20 @@ createApp({
         }
     },
     created() {
+        this.setStuInfo()
         this.setAvatar()
         this.setCurrentDate()
         this.setCurrentTime()
     },
     methods: {
-        setAvatar() {
-            this.avatar = localStorage.getItem("avatar") ?? this.avatar
-        },
         setStuInfo() {
-
+            let stuInfo = localStorage.getItem('stuInfo')
+            if (stuInfo != null) {
+                this.stuInfo = JSON.parse(stuInfo)
+            }
+        },
+        setAvatar() {
+            this.avatar = localStorage.getItem('avatar') ?? this.avatar
         },
         setCurrentDate() {
             var date = new Date()
