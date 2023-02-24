@@ -1,4 +1,5 @@
 import { createApp } from '/tools/izhicheng/js/vue.js'
+import '/tools/izhicheng/js/utils.js'
 
 createApp({
     data() {
@@ -25,6 +26,20 @@ createApp({
         this.setCurrentDate()
         this.setCurrentTime()
     },
+    mounted() {
+        let date = new Date()
+        watermark({
+            container: this.$refs.card,
+            content: `${ date.getFullYear() }年${ (date.getMonth() < 9 ? '0' : '') + (date.getMonth() + 1) }月${ date.getDate() }日`,
+            width: "175px",
+            height: "60px",
+            rotate: '-20',
+            font: "12px microsoft yaheipx",
+            textAlign: "center",
+            textBaseline: "top",
+            fillStyle: "rgb(229, 215, 215)",
+        })
+    },
     methods: {
         setStuInfo() {
             let stuInfo = localStorage.getItem('stuInfo')
@@ -36,9 +51,9 @@ createApp({
             this.avatar = localStorage.getItem('avatar') ?? this.avatar
         },
         setCurrentDate() {
-            var date = new Date()
-            var year = date.getFullYear()
-            var month = date.getMonth() + 1
+            let date = new Date();
+            let year = date.getFullYear();
+            let month = date.getMonth() + 1;
             if (month < 10) {
                 month = "0" + month
             }
@@ -47,7 +62,7 @@ createApp({
         },
         setCurrentTime() {
             setInterval(() => {
-                var date = new Date()
+                let date = new Date()
                 this.currentTime.hour = date.getHours()
                 this.currentTime.minute = date.getMinutes()
                 this.currentTime.second = date.getSeconds()
